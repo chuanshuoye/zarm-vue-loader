@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/chuanshuoye/zarm-vue-loader#readme",
   "dependencies": {
+    "cheerio": "^0.20.0",
     "highlight.js": "^9.4.0",
     "loader-utils": "^1.1.0",
     "markdown-it": "^8.4.1",
