@@ -28,7 +28,7 @@ module.exports = {
       },
       {
         test: /\.md$/,
-        use: ['vue-loader', resolve(__dirname, "../index.js?vueModel=true")]      }
+        use: ['vue-loader', resolve(__dirname, "../index.js")]      }
     ]
   },
   devServer: {

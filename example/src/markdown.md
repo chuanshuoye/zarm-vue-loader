@@ -2,81 +2,40 @@
 export default {};
 </script>
 
-::: demo
+## 按钮 Button
+
+### 按钮类型
+支持`default`、`primary`、`danger`三种类型，默认为`default`
+
+::: demo 朴素按钮
 ```html
-  <za-panel>
-    <za-panel-header title="基本"></za-panel-header>
-    <za-panel-body>
-      <za-cell>
-        <za-button slot='description' size='xs' @click='visible1 = true'>开启</za-button>
-        普通
-      </za-cell>
-      <za-cell>
-        <za-button slot='description' size='xs' @click='visible2 = true'>开启</za-button>
-        圆角
-      </za-cell>
-      <za-cell>
-        <za-button slot='description' size='xs' @click='visible3 = true'>开启</za-button>
-        遮罩层可关闭
-      </za-cell>
-      <za-cell>
-        <za-button slot='description' size='xs' @click='visible4 = true'>开启</za-button>
-        无头部
-      </za-cell>
-      <za-cell>
-        <za-button slot='description' size='xs' @click='visible5 = true'>开启</za-button>
-        动画效果
-      </za-cell>
-    </za-panel-body>
-  </za-panel>
-  <za-panel>
-    <za-panel-header title="特定场景"></za-panel-header>
-    <za-panel-body>
-      <za-cell>
-        <za-button slot='description' size='xs' @click='visible6 = true' theme="warning">开启</za-button>
-        警告框 Alert
-      </za-cell>
-      <za-cell>
-        <za-button slot='description' size='xs' @click='visible7 = true' theme="warning">开启</za-button>
-        确认框 Confirm
-      </za-cell>
-    </za-panel-body>
-  </za-panel>
-
-  <za-modal :visible.sync='visible1' @close='handleClose' title="标题" :show-close='true'>
-    模态框内容
-  </za-modal>
-
-  <za-modal :visible.sync='visible2' @close='handleClose' radius :show-close='true'>
-    模态框内容
-  </za-modal>
-
-  <za-modal :visible.sync='visible3' @close='handleClose' :close-on-click-modal='true' title="标题" :show-close='true' >
-    遮罩层可关闭
-  </za-modal>
-
-  <za-modal :visible.sync='visible4' @close='handleClose' :close-on-click-modal='true'>
-    无头部
-  </za-modal>
-
-  <za-modal :visible.sync='visible5' @close='handleClose' animationType="rotate" :close-on-click-modal='true' title="标题" :show-close='true'>
-    当前使用的是rotate旋转效果。<br /><br />
-    支持多种动画效果：<br />
-    zoom：缩放效果（默认）<br />
-    rotate：旋转效果<br />
-    fade：淡出淡入效果<br />
-    door：开关门效果<br />
-    flip：翻转效果<br />
-    moveUp、moveDown、moveLeft、moveRight：移出移入效果<br />
-    slideUp、slideDown、slideLeft、slideRight：滑出滑入效果<br />
-  </za-modal>
-
-  <za-alert :visible.sync='visible6' radius title="警告" message="这里是警告信息" @close='handleClose'></za-alert>
-  <za-confirm :visible='visible7' title="确认信息" message="你确定要这样做吗？" :ok='handleOk' :cancel='handleCancel'></za-confirm>
+  <za-button theme="primary">普通按钮</za-button>
+  <za-button theme="primary" block>块级按钮</za-button>
+  <za-button theme="primary" block active>激活状态的按钮</za-button>
+  <za-button theme="primary" block disabled>禁用状态的按钮</za-button>
+  <script>
+  export default {};
+  </script>
 ```
 :::
 
-::: api
+#### 幽灵按钮
+按钮标签默认为`button`，可以使用`tag`属性来修改按钮标签
+
+::: demo 幽灵按钮
+```html
+  <za-button block bordered>幽灵按钮</za-button>
+  <za-button block bordered active>激活状态的按钮</za-button>
+  <za-button block bordered disabled>禁用状态的按钮</za-button>
+  <za-button theme="primary" block bordered>幽灵按钮</za-button>
+  <za-button theme="primary" block bordered active>激活状态的按钮</za-button>
+  <za-button theme="primary" block bordered disabled>禁用状态的按钮</za-button>
+  <script>
+  export default {};
+  </script>
+```
+:::
+
 ### API
 
 #### Button Attributes
@@ -97,5 +56,3 @@ export default {};
 | 事件名称 | 说明 | 回调参数 |
 | :--- | :--- | :--- |
 | click | click时触发的事件 | event 事件对象 |
-
-:::
