@@ -1,6 +1,6 @@
 {
   "name": "zarm-vue-loader",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "vue markdown to component",
   "main": "index.js",
   "scripts": {
