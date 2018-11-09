@@ -7,6 +7,9 @@ export default {};
 ### 按钮类型
 支持`default`、`primary`、`danger`三种类型，默认为`default`
 
+`zarm-vue 为 Vue.prototype 上添加了全局方法：$zaLoading 因此在 vue instance 内可以采用
+this.$zaLoading()的方式调用, 方法返回Loading的实例, 调用实例的close方法来关闭loading`。
+
 ::: demo 朴素按钮
 ```html
   <za-button theme="primary">普通按钮</za-button>
