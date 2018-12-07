@@ -1,7 +1,3 @@
-<script>
-export default {};
-</script>
-
 ## 按钮 Button
 
 ### 按钮类型
@@ -16,9 +12,6 @@ this.$zaLoading()的方式调用, 方法返回Loading的实例, 调用实例的c
   <za-button theme="primary" block>块级按钮</za-button>
   <za-button theme="primary" block active>激活状态的按钮</za-button>
   <za-button theme="primary" block disabled>禁用状态的按钮</za-button>
-  <script>
-  export default {};
-  </script>
 ```
 :::
 
@@ -33,11 +26,15 @@ this.$zaLoading()的方式调用, 方法返回Loading的实例, 调用实例的c
   <za-button theme="primary" block bordered>幽灵按钮</za-button>
   <za-button theme="primary" block bordered active>激活状态的按钮</za-button>
   <za-button theme="primary" block bordered disabled>禁用状态的按钮</za-button>
-  <script>
-  export default {};
-  </script>
 ```
 :::
+
+### vue script 示例
+```javascript
+<script>
+export default {};
+</script>
+```
 
 ### API
 
